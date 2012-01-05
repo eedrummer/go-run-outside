@@ -1,0 +1,3 @@
+URL for one of my runs
+
+http://nikerunning.nike.com/nikeplus/v2/services/app/get_public_run.jsp?id=1908844015&userID=1688177886&filterBy=all&cb=1323825393197
