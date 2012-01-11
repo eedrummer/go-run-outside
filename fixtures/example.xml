@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <plusService>
-	<status>success</status> -->
+<plusService>
+	<status>success</status>
 	<runList endIndex="-1" startIndex="0">
 		<run id="1484663528" workoutType="standard">
 			<startTime>2000-01-01T10:22:32-04:00</startTime>
@@ -7784,11 +7784,11 @@
 			<equipmentType>ipod</equipmentType>
 		</run>
 	</runList>
-	<!-- <runListSummary>
+	<runListSummary>
 		<runs>486</runs>
 		<distance>2376.4894</distance>
 		<runDuration>931001170</runDuration>
 		<calories>209294.0</calories>
 		<duration>931001170</duration>
 	</runListSummary>
-</plusService> -->
+</plusService>
