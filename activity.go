@@ -1,4 +1,4 @@
-package runkeeper
+package gorunoutside
 
 type Distance struct {
   Timestamp int `json:"timestamp"`

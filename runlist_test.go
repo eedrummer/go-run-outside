@@ -1,4 +1,4 @@
-package nikeplus
+package gorunoutside
 
 import (
   "testing"
@@ -8,7 +8,7 @@ import (
 )
 
 func TestLoadAllRuns(t *testing.T) {
-  file, err := os.Open("../../fixtures/example.xml")
+  file, err := os.Open("fixtures/example.xml")
   if err == nil {
     ps := new(PlusService)
     xml.Unmarshal(file, ps)
@@ -22,7 +22,7 @@ func TestLoadAllRuns(t *testing.T) {
 }
 
 func TestLoadIndividualRun(t *testing.T) {
-  file, err := os.Open("../../fixtures/individual_run.xml")
+  file, err := os.Open("fixtures/individual_run.xml")
   if err == nil {
     ps := new(PlusService)
     xml.Unmarshal(file, ps)

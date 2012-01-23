@@ -1,4 +1,4 @@
-package runkeeper
+package gorunoutside
 
 import (
   "testing"

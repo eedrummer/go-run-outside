@@ -1,4 +1,4 @@
-package nikeplus
+package gorunoutside
 
 type Run struct {
   Id int `xml:"attr"`
@@ -38,9 +38,14 @@ type RunSummary struct {
   HasGpsData bool
 }
 
+type ExtendedDataList struct {
+  ExtendedData string
+}
+
 type SportsData struct {
   UserInfo UserInfo
   RunSummary RunSummary
+  ExtendedDataList ExtendedDataList
 }
 
 type PlusService struct {

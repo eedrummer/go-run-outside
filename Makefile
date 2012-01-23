@@ -1,7 +1,8 @@
 include $(GOROOT)/src/Make.inc
 
-TARG=runkeeper
+TARG=gorunoutside
 GOFILES=\
-	activity.go\
+	runlist.go\
+	activity.go
 
 include $(GOROOT)/src/Make.pkg
