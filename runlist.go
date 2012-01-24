@@ -1,4 +1,4 @@
-package gorunoutside
+package main
 
 type Run struct {
   Id int `xml:"attr"`

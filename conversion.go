@@ -1,4 +1,4 @@
-package gorunoutside
+package main
 
 import (
   "strings"

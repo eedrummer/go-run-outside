@@ -1,4 +1,4 @@
-package gorunoutside
+package main
 
 type Distance struct {
   Timestamp int `json:"timestamp"`
