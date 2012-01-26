@@ -6,6 +6,7 @@ GOFILES=\
 	activity.go\
 	conversion.go\
 	oauth.go\
+	nikeplus.go\
 	main.go
 
 include $(GOROOT)/src/Make.pkg
