@@ -7,12 +7,12 @@ import (
 )
 
 func GetRunList(client *http.Client, userId string) *PlusService {
-  url := fmt.Sprint("http://nikerunning.nike.com/nikeplus/v1/services/widget/get_public_run_list.jsp?userID=%s", userId)
+  url := fmt.Sprintf("http://nikerunning.nike.com/nikeplus/v1/services/widget/get_public_run_list.jsp?userID=%s", userId)
   return fetchRunList(client, url)
 }
 
 func GetIndividualRun(client *http.Client, userId string, runId string) *PlusService {
-  url := fmt.Sprint("http://nikerunning.nike.com/nikeplus/v2/services/app/get_public_run.jsp?id=%s&userID=%s", runId, userId)
+  url := fmt.Sprintf("http://nikerunning.nike.com/nikeplus/v2/services/app/get_public_run.jsp?id=%s&userID=%s", runId, userId)
   return fetchRunList(client, url)
 }
 
