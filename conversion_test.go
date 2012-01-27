@@ -29,7 +29,7 @@ func TestConvertNikePlusToRunKeeper(t *testing.T) {
     activity := ConvertNikePlusToRunKeeper(ps)
     
     assert.Equal(t, "Running", activity.Type)
-    assert.Equal(t, "Sun, 09 Dec 2011 07:11:45 -0500", activity.StartTime)
+    assert.Equal(t, "Fri, 09 Dec 2011 12:11:45 UTC", activity.StartTime)
     assert.Equal(t, 3951.9, activity.TotalDistance)
     assert.Equal(t, 160, len(activity.Distance))
     assert.Equal(t, 18.0, math.Floor(activity.Distance[1].Distance))

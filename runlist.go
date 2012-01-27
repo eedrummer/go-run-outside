@@ -55,6 +55,9 @@ type SportsData struct {
 
 func (sd SportsData) ParsedStartTime() *time.Time {
   t, _ := time.Parse(time.RFC3339, sd.StartTime)
+  // Hack to make sure that the weekday is set correctly.
+  // Found here: http://code.google.com/p/go/issues/detail?id=2291
+  t = time.SecondsToUTC(t.Seconds())
   return t
 }
 
