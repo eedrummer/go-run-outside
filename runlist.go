@@ -1,5 +1,9 @@
 package main
 
+import (
+  "time"
+)
+
 type Run struct {
   Id int `xml:"attr"`
   StartTime string
@@ -46,6 +50,12 @@ type SportsData struct {
   UserInfo UserInfo
   RunSummary RunSummary
   ExtendedDataList ExtendedDataList
+  StartTime string
+}
+
+func (sd SportsData) ParsedStartTime() *time.Time {
+  t, _ := time.Parse(time.RFC3339, sd.StartTime)
+  return t
 }
 
 type PlusService struct {

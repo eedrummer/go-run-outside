@@ -40,3 +40,11 @@ func TestDistanceInMiles(t *testing.T) {
   rls.Distance = 15
   assert.Equal(t, 9.32056788, rls.DistanceInMiles())
 }
+
+func TestSportsDataTimeConversion(t *testing.T) {
+  sd := new(SportsData)
+  sd.StartTime = "2011-12-09T07:11:45-05:00"
+  startTime := sd.ParsedStartTime()
+  assert.Equal(t, 12, startTime.Month)
+  assert.Equal(t, 9, startTime.Day)
+}
