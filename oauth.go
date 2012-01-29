@@ -7,6 +7,7 @@ import (
   "fmt"
   "json"
   "io/ioutil"
+  "strings"
 )
 
 const (
@@ -47,4 +48,16 @@ func ObtainBearerToken(code string) {
   } else {
     fmt.Print(err)
   }
+}
+
+func CheckForBearerToken() string {
+  stat, _ := os.Stat(".bearer_token")
+  var bearerToken string
+  if stat != nil {
+    file, _ := os.Open(".bearer_token")
+    fileContents, _ := ioutil.ReadAll(file)
+    file.Close()
+    bearerToken = strings.TrimSpace(string(fileContents))
+  }
+  return bearerToken
 }
