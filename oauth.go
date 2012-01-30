@@ -42,7 +42,7 @@ func ObtainBearerToken(code string) {
   if err == nil {
     responseBody, _ := ioutil.ReadAll(response.Body)
     json.Unmarshal(responseBody, &responseJson)
-    file, _ := os.OpenFile(".bearer_token", os.O_TRUNC | os.O_WRONLY, 644)
+    file, _ := os.Create(".bearer_token")
     file.WriteString(responseJson["access_token"])
     file.Close()
   } else {
