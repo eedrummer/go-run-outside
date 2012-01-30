@@ -28,7 +28,7 @@ func ConvertNikePlusToRunKeeper(plusService *PlusService) *Activity {
   }
   activity.TotalDistance = plusService.SportsData.RunSummary.Distance * 1000
   activity.Distance = ConvertExtendedData(plusService.SportsData.ExtendedDataList.ExtendedData)
-  activity.Duration = plusService.SportsData.RunSummary.Duration
+  activity.Duration = plusService.SportsData.RunSummary.Duration / 1000
   activity.TotalCalories = plusService.SportsData.RunSummary.Calories
   return activity
 }

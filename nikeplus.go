@@ -11,8 +11,8 @@ func GetRunList(client *http.Client, userId string) *PlusService {
   return fetchRunList(client, url)
 }
 
-func GetIndividualRun(client *http.Client, userId string, runId string) *PlusService {
-  url := fmt.Sprintf("http://nikerunning.nike.com/nikeplus/v2/services/app/get_public_run.jsp?id=%s&userID=%s", runId, userId)
+func GetIndividualRun(client *http.Client, userId string, runId int) *PlusService {
+  url := fmt.Sprintf("http://nikerunning.nike.com/nikeplus/v2/services/app/get_public_run.jsp?id=%d&userID=%s", runId, userId)
   return fetchRunList(client, url)
 }
 
