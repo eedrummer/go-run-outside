@@ -1,15 +1,40 @@
 Go Run Outside
---------------
+==============
 
-The goal of this project is to create a command line application that will take run data from Nike+ and move it to RunKeeper.
+This project is a command line application that moves run data from Nike+ and move it to RunKeeper.
 
 Why?
-====
+----
 
 This is a hobby project to teach myself the Go programming language. I am aware that there are solutions out there to move runs from Nike+ to RunKeeper already.
 
+Install
+-------
+
+You'll need to have [Go](http://golang.org/) installed.
+
+    git clone https://github.com/eedrummer/go-run-outside.git
+    cd go-run-outside
+    gomake
+    ./main -u YOUR_NIKEPLUS_ID
+
+Your Nike+ id is usually visible in as a query parameter when signed in and viewing the Nike+ web site.
+
+About the Makefile
+------------------
+
+I am terrible with Makefiles. It is currently set up to build the executable. If you want to run the test suite change the last line from
+
+    include $(GOROOT)/src/Make.cmd
+
+to
+
+    include $(GOROOT)/src/Make.pkg
+
+Any Makefile help/suggestions would be appreciated.
+
 License
-=======
+-------
 
 Copyright 2012 Andy Gregorowicz
 
